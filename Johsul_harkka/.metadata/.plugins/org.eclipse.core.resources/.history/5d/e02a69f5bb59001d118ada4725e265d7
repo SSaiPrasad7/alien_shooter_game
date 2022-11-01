@@ -21,8 +21,8 @@ void setup(){
 
 	uint8_t *ctrl_addr = CTRL_ADDRESS;
 	uint8_t *channel_addr = CHANNEL_ADDRESS;
-	*ctrl_addr = 0;
-	*channel_addr = 0;
+	*ctrl_addr &= ~(0xFF);
+	*channel_addr &= ~(0xFF);
 
 	// Resetting the screen at start is a MUST to operation (Set RSTn to 1).
 	*ctrl_addr &= ~(1 << 0);

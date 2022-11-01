@@ -427,3 +427,8 @@ con
 
 11:02:19 INFO  : Launch script is exported to file 'P:\StudentDocuments\introduction_to_embedded_systems\Project_work_material_20221028\JoSu_project\JoSu_project\Johsul_harkka\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
 12:13:24 INFO  : Disconnected from the channel tcfchan#1.
+09:35:50 INFO  : Registering command handlers for SDK TCF services
+09:35:50 INFO  : Launching XSCT server: xsct.bat -interactive P:\StudentDocuments\introduction_to_embedded_systems\alien_shooter_game\Johsul_harkka\temp_xsdb_launch_script.tcl
+09:35:53 INFO  : XSCT server has started successfully.
+09:35:58 INFO  : Successfully done setting XSCT server connection channel  
+09:35:59 INFO  : Successfully done setting SDK workspace  

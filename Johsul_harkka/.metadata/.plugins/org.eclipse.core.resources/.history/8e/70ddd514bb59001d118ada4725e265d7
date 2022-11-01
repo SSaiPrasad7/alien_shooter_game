@@ -21,31 +21,27 @@ void setup(){
 
 	uint8_t *ctrl_addr = CTRL_ADDRESS;
 	uint8_t *channel_addr = CHANNEL_ADDRESS;
-	*ctrl_addr = 0;
-	*channel_addr = 0;
+	*ctrl_addr &= ~ (uint8_t)(0xFF);
+	*channel_addr &= ~ (uint8_t)(0xFF);
 
 	// Resetting the screen at start is a MUST to operation (Set RSTn to 1).
-	*ctrl_addr &= ~(1 << 0);
-	sleep(500);
 	*ctrl_addr |= (1<<0);
 	sleep(500);
-	*ctrl_addr |= (1<<4);
+	*ctrl_addr &= ~(1 << 0);
 	sleep(500);
-
+	*ctrl_addr |= (1<<4);
 	//Write code that sets 6-bit values in register of DM163 chip. Recommended that every bit in that register is set to 1. 6-bits and 24 "bytes", so some kind of loop structure could be nice.
 	//24*6 bits needs to be transmitted
-	for(int i = 0; i < 24; i++)
+	for(int i = 0; i < 6; i++)
 	{
-		for(int j = 0; j < 6; j++)
-		{
-			*ctrl_addr &= ~(1 << 3);
-			*ctrl_addr |= (1 << 4);
-			*ctrl_addr |= (1 << 3);
-		}
+		*channel_addr |= (1<<i);
 	}
+
+
 
 	//Final thing in this function is to set SB-bit to 1 to enable transmission to 8-bit register.
 	*ctrl_addr |= (1<<2);
+
 }
 
 //Change value of one pixel at led matrix. This function is only used for changing values of dots array

@@ -1,23 +1,10 @@
-12:13:28 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+10:05:33 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 Building file: ../src/Pixel.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
-../src/Pixel.c: In function 'setup':
-../src/Pixel.c:16:22: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define CTRL_ADDRESS *(uint8_t *) 0x41220008
-                      ^
-../src/Pixel.c:22:23: note: in expansion of macro 'CTRL_ADDRESS'
-  uint8_t *ctrl_addr = CTRL_ADDRESS;
-                       ^~~~~~~~~~~~
-../src/Pixel.c:17:25: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
- #define CHANNEL_ADDRESS *(uint8_t *) 0x41220000
-                         ^
-../src/Pixel.c:23:26: note: in expansion of macro 'CHANNEL_ADDRESS'
-  uint8_t *channel_addr = CHANNEL_ADDRESS;
-                          ^~~~~~~~~~~~~~~
 Finished building: ../src/Pixel.c
  
 Building target: Embedded_Exercise_normal.elf
@@ -28,9 +15,9 @@ Finished building target: Embedded_Exercise_normal.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  33476	   2828	  22856	  59160	   e718	Embedded_Exercise_normal.elf
+  33620	   2828	  22856	  59304	   e7a8	Embedded_Exercise_normal.elf
 Finished building: Embedded_Exercise_normal.elf.size
  
 
-12:13:32 Build Finished (took 4s.920ms)
+10:05:37 Build Finished (took 4s.665ms)
 

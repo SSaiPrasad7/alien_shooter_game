@@ -615,3 +615,218 @@ arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.
   33476	   2828	  22856	  59160	   e718	Embedded_Exercise_normal.elf
 Finished building: Embedded_Exercise_normal.elf.size
  
+09:38:09 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:28:17: error: 'FF' undeclared (first use in this function)
+  *ctrl_addr &= ~FF;
+                 ^~
+../src/Pixel.c:28:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/Pixel.o] Virhe 1
+09:44:01 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~ (0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~ (0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33528	   2828	  22856	  59212	   e74c	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+09:44:31 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~ (uint8_t)(0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~ (uint8_t)(0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33528	   2828	  22856	  59212	   e74c	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+09:45:06 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~ (uint8_t)(0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~ (uint8_t)(0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33552	   2828	  22856	  59236	   e764	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+09:59:16 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~ (uint8_t)(0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~ (uint8_t)(0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33620	   2828	  22856	  59304	   e7a8	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+10:00:56 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33644	   2828	  22856	  59328	   e7c0	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+10:01:07 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~ (0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~(0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33620	   2828	  22856	  59304	   e7a8	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+10:01:27 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+../src/Pixel.c: In function 'setup':
+../src/Pixel.c:24:16: warning: overflow in implicit constant conversion [-Woverflow]
+  *ctrl_addr &= ~(0xFF);
+                ^
+../src/Pixel.c:25:19: warning: overflow in implicit constant conversion [-Woverflow]
+  *channel_addr &= ~(0xFF);
+                   ^
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33620	   2828	  22856	  59304	   e7a8	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
+10:05:33 **** Auto Build of configuration Debug for project Embedded_Exercise_normal ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/Pixel.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Pixel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Pixel.d" -MT"src/Pixel.o" -o "src/Pixel.o" "../src/Pixel.c"
+Finished building: ../src/Pixel.c
+ 
+Building target: Embedded_Exercise_normal.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf"  ./src/Interrupt_setup.o ./src/Pixel.o ./src/blinker.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Embedded_Exercise_normal.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33620	   2828	  22856	  59304	   e7a8	Embedded_Exercise_normal.elf
+Finished building: Embedded_Exercise_normal.elf.size
+ 
