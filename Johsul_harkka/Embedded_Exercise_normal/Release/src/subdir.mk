@@ -12,11 +12,18 @@ C_SRCS += \
 ../src/main.c \
 ../src/platform.c 
 
+S_UPPER_SRCS += \
+../src/blinker.S 
+
 OBJS += \
 ./src/Interrupt_setup.o \
 ./src/Pixel.o \
+./src/blinker.o \
 ./src/main.o \
 ./src/platform.o 
+
+S_UPPER_DEPS += \
+./src/blinker.d 
 
 C_DEPS += \
 ./src/Interrupt_setup.d \
@@ -27,6 +34,13 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 src/%.o: ../src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM v7 gcc compiler'
+	arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/%.o: ../src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v7 gcc compiler'
 	arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Embedded_Exercise_bsp/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

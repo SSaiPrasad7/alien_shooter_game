@@ -88,7 +88,7 @@ Student number:
 Tick boxes that you have coded
 
 Led-matrix driver		Game		    Assembler
-	[]					[]					[]
+	[x]					[]					[]
 
 Brief description:
 
@@ -111,6 +111,9 @@ int main()
 
 	    //setup screen
 	    setup();
+	    SetPixel(1,2,255,0,0);
+	    run(1);
+	    open_line(1);
 
 
 

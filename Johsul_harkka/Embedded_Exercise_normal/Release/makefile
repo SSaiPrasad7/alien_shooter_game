@@ -25,32 +25,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ELFSIZE += \
-Embedded_Exercise.elf.size \
+Embedded_Exercise_normal.elf.size \
 
 
 # All Target
 all: pre-build main-build
 
 # Main-build Target
-main-build: Embedded_Exercise.elf secondary-outputs
+main-build: Embedded_Exercise_normal.elf secondary-outputs
 
 # Tool invocations
-Embedded_Exercise.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
+Embedded_Exercise_normal.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM v7 gcc linker'
-	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Embedded_Exercise_bsp/ps7_cortexa9_0/lib -o "Embedded_Exercise_normal.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-Embedded_Exercise.elf.size: Embedded_Exercise.elf
+Embedded_Exercise_normal.elf.size: Embedded_Exercise_normal.elf
 	@echo 'Invoking: ARM v7 Print Size'
-	arm-none-eabi-size Embedded_Exercise.elf  |tee "Embedded_Exercise.elf.size"
+	arm-none-eabi-size Embedded_Exercise_normal.elf  |tee "Embedded_Exercise_normal.elf.size"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) Embedded_Exercise.elf
+	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) Embedded_Exercise_normal.elf
 	-@echo ' '
 
 pre-build:
